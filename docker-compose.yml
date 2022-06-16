@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+# Php-fpm configuration
+  php:
+    image: onuk/php7.4-fpm:0.0.1
+    volumes:
+      - ./www:/var/www/html
+      - ./php:/usr/local/etc/php
+    ports:
+      - "9000:9000"
